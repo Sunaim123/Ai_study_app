@@ -28,6 +28,7 @@ export const login = (email, password, onSuccess) => async (dispatch) => {
       throw new Error("Login failed")
     }
   } catch (error) {
+    console.log(error);
     const errorMessage = error.response ? error.response.data.message : 'Login Failed'
     dispatch({ type: "LOGIN_FAILURE", payload: errorMessage })
     toast.error(errorMessage)
