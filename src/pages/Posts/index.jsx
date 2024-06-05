@@ -14,7 +14,7 @@ const Posts = () => {
   useEffect(() => {
     const fetchUniversities = async () => {
       try {
-        const response = await axios.get(`http://170.64.228.126:5000/get_universities?${queryParams.toString().replace(/\+/g, '%20')}`)
+        const response = await axios.get(`http://127.0.0.1:5000/get_universities?${queryParams.toString().replace(/\+/g, '%20')}`)
         setUniversities(response.data)
         setLoading(false)
       } catch (error) {
@@ -44,7 +44,7 @@ const Posts = () => {
   const getUniversities = async (params) => {
     try {
       const query = new URLSearchParams(params)
-      const response = await axios.get(`http://170.64.228.126:5000/get_universities?${query.toString().replace(/\+/g, '%20')}`)
+      const response = await axios.get(`http://127.0.0.1:5000/get_universities?${query.toString().replace(/\+/g, '%20')}`)
       setUniversities(response.data)
       setLoading(false)
     } catch (error) {

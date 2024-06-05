@@ -32,7 +32,7 @@ const SignUp = () => {
       }
 
       // Send a POST request to the registration API
-      const response = await axios.post("http://170.64.228.126:5000/register", userData)
+      const response = await axios.post("http://127.0.0.1:5000/register", userData)
 
       if (response.status === 201) {
         // Registration successful

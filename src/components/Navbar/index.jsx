@@ -12,7 +12,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       // Hit the logout endpoint
-      const response = await fetch('http://170.64.228.126:5000/logout', {
+      const response = await fetch('http://127.0.0.1:5000/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const API_ENDPOINT = 'http://170.64.228.126:5000/'
+const API_ENDPOINT = 'http://127.0.0.1:5000/'
 
   export const fetchUniversityById = (domain) => async dispatch => {
     try {

@@ -24,7 +24,7 @@ const Details = () => {
     const fetchDescription = async () => {
       try {
         const descriptionResponse = await axios.get(
-          `http://170.64.228.126:5000/description/${domain}/${university}`
+          `http://127.0.0.1:5000/description/${domain}/${university}`
         )
         setDescription(descriptionResponse.data.description)
       } catch (error) {
@@ -35,7 +35,7 @@ const Details = () => {
     const fetchReviews = async () => {
       try {
         const reviewsResponse = await axios.post(
-          `http://170.64.228.126:5000/recommendations`,
+          `http://127.0.0.1:5000/recommendations`,
           { university }
         )
         // Ensure reviewsResponse.data.recommendation is an array before setting it to state

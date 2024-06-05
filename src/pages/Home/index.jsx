@@ -17,7 +17,7 @@ const Home = () => {
       setLoading(true)
       setError(null)
       try {
-        const response = await fetch("http://170.64.228.126:5000/get_suggestions")
+        const response = await fetch("http://127.0.0.1:5000/get_suggestions")
         const data = await response.json()
         setSuggestions(data)
       } catch (err) {
